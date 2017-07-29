@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Appointment } from '../appointment';
 
 @Component({
   selector: 'cadence-new-appointment',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-appointment.component.css']
 })
 export class NewAppointmentComponent implements OnInit {
+  model = new Appointment();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  save() {
+    console.log(this.model);
   }
 
 }
